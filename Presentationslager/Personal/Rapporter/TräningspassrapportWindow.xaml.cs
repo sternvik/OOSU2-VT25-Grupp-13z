@@ -26,9 +26,10 @@ namespace Presentationslager.Personal.Rapporter
         private readonly TräningspassController _träningspassController;
         private readonly TränareController _tränareController;
         private readonly MedlemTräningspassController _medlemTräningspassController;
+        private readonly UtrustningController _utrustningController;
         private List<Träningspass> _träningspass;
         private Träningspass _valdträningspass;
-        public TräningspassrapportWindow(TräningspassController träningspassController, TränareController tränareController, UnitOfWork unitOfWork, MedlemTräningspassController medlemTräningspassController)
+        public TräningspassrapportWindow(TräningspassController träningspassController, TränareController tränareController, UnitOfWork unitOfWork, MedlemTräningspassController medlemTräningspassController, UtrustningController utrustningController)
         {
             InitializeComponent();
             _unitOfWork = unitOfWork;
@@ -37,6 +38,8 @@ namespace Presentationslager.Personal.Rapporter
             _medlemTräningspassController = medlemTräningspassController;
             LaddaSpecialiseringFilter();
             LaddaTräningspass();
+            _utrustningController = utrustningController;
+            
         }
 
         private void LaddaSpecialiseringFilter()
@@ -101,7 +104,7 @@ namespace Presentationslager.Personal.Rapporter
 
         private void TillbakaButton_Click(object sender, RoutedEventArgs e)
         {
-            RapporterWindow rapporterWindow = new RapporterWindow(_träningspassController, _tränareController, _unitOfWork, _medlemTräningspassController);
+            RapporterWindow rapporterWindow = new RapporterWindow(_träningspassController, _tränareController, _unitOfWork, _medlemTräningspassController, _utrustningController);
             rapporterWindow.Show();
             this.Close();
         }

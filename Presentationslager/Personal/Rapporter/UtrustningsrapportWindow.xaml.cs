@@ -17,43 +17,39 @@ using System.Windows.Shapes;
 namespace Presentationslager.Personal.Rapporter
 {
     /// <summary>
-    /// Interaction logic for RapporterWindow.xaml
+    /// Interaction logic for UtrustningsrapportWindow.xaml
     /// </summary>
-    public partial class RapporterWindow : Window
+    public partial class UtrustningsrapportWindow : Window
     {
         private readonly UnitOfWork _unitOfWork;
         private readonly TräningspassController _träningspassController;
         private readonly TränareController _tränareController;
         private readonly MedlemTräningspassController _medlemTräningspassController;
         private readonly UtrustningController _utrustningController;
-        public RapporterWindow(TräningspassController träningspassController, TränareController tränareController, UnitOfWork unitOfWork, MedlemTräningspassController medlemTräningspassController, UtrustningController utrustningController)
+        public UtrustningsrapportWindow(TräningspassController träningspassController, TränareController tränareController, UnitOfWork unitOfWork, MedlemTräningspassController medlemTräningspassController, UtrustningController utrustningController)
         {
             InitializeComponent();
-            _unitOfWork = unitOfWork;
             _träningspassController = träningspassController;
+            _unitOfWork = unitOfWork;
             _tränareController = tränareController;
             _medlemTräningspassController = medlemTräningspassController;
             _utrustningController = utrustningController;
+            LaddaRapport();
         }
 
-        private void UtrustningsrapportButton_Click(object sender, RoutedEventArgs e)
+        private void LaddaRapport()
         {
-            UtrustningsrapportWindow utrustningsrapportWindow = new UtrustningsrapportWindow(_träningspassController, _tränareController, _unitOfWork, _medlemTräningspassController, _utrustningController);
-            utrustningsrapportWindow.Show();
-            this.Close();
-        }
+            var saknadutrustning = _utrustningController.HämtaSaknadUtrustning().ToList();
+            var trasigutrustning = _utrustningController.HämtaTrasigUtrustning().ToList();
 
-        private void TräningspassrapportButton_Click(object sender, RoutedEventArgs e)
-        {
-            TräningspassrapportWindow träningspassrapportWindow = new TräningspassrapportWindow(_träningspassController, _tränareController, _unitOfWork, _medlemTräningspassController, _utrustningController);
-            träningspassrapportWindow.Show();
-            this.Close();
+            TrasigListBox.ItemsSource = trasigutrustning;
+            SaknadListBox.ItemsSource = saknadutrustning;
         }
 
         private void TillbakaButton_Click(object sender, RoutedEventArgs e)
         {
-            PersonalMenyWindow personalMenyWindow = new PersonalMenyWindow(_unitOfWork);
-            personalMenyWindow.Show();
+            RapporterWindow rapporterWindow = new RapporterWindow(_träningspassController, _tränareController, _unitOfWork, _medlemTräningspassController, _utrustningController);
+            rapporterWindow.Show();
             this.Close();
         }
     }

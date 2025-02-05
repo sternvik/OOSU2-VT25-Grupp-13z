@@ -1,0 +1,23 @@
+﻿<Window x:Class="Presentationslager.Personal.Rapporter.UtrustningsrapportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentationslager.Personal.Rapporter"
+        mc:Ignorable="d"
+        Title="UtrustningsrapportWindow" Height="450" Width="800"
+        Background="#6ab"
+        >
+    <Grid>
+        <TextBlock Text="Utrustningsrapport" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Trasig Utrustning:" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="350,-250,0,0"/>
+        <ListBox x:Name="TrasigListBox" DisplayMemberPath="Namn" Height="200" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-350,0,0,0"/>
+
+        <TextBlock Text="Saknad Utrustning:" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-350,-250,0,0"/>
+        <ListBox x:Name="SaknadListBox" DisplayMemberPath="Namn" Height="200" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="350,0,0,0"/>
+
+        <Button Content="Tillbaka" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,350,0,0" Click="TillbakaButton_Click"/>
+
+    </Grid>
+</Window>

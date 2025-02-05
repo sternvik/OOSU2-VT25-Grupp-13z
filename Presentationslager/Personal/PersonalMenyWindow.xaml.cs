@@ -89,7 +89,7 @@ namespace Presentationslager
 
         private void RapporterButton_Click(object sender, RoutedEventArgs e)
         {
-            RapporterWindow rapporterWindow = new RapporterWindow(träningspassController, tränareController, _unitOfWork, medlemTräningspassController);
+            RapporterWindow rapporterWindow = new RapporterWindow(träningspassController, tränareController, _unitOfWork, medlemTräningspassController, utrustningController);
             rapporterWindow.Show();
             this.Close();
         }

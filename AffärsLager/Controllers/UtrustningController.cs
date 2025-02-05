@@ -79,5 +79,15 @@ namespace AffärsLager
         {
             return _unitOfWork.UtrustningRepository.GetAll().Where(u => u.Tillgängliga > 0);
         }
+
+        public IEnumerable<Utrustning> HämtaSaknadUtrustning()
+        {
+            return _unitOfWork.UtrustningRepository.GetAll().Where(u => u.Tillgängliga <= 0);
+        }
+
+        public IEnumerable<Utrustning> HämtaTrasigUtrustning()
+        {
+            return _unitOfWork.UtrustningRepository.GetAll().Where(u => u.Skick == "Trasig");
+        }
     }
 }
