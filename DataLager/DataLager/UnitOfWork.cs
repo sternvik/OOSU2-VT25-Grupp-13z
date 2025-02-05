@@ -69,7 +69,7 @@ namespace DataLager
                 Betalstatus = true
             });
 
-         
+
             //TRÄNARE
             TränareRepository.Add(new Tränare
             {
@@ -96,7 +96,7 @@ namespace DataLager
                 TränareID = 1
             });
 
-            
+
             TräningspassRepository.Add(new Träningspass
             {
                 Aktivitet = "Paddel",

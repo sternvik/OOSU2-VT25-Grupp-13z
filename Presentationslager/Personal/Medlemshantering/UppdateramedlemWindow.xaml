@@ -1,0 +1,37 @@
+﻿<Window x:Class="Presentationslager.Personal.Medlemshantering.UppdateramedlemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentationslager.Personal.Medlemshantering"
+        mc:Ignorable="d"
+        Title="UppdateramedlemWindow" Height="450" Width="800"
+        Background="#6ab"
+        >
+    <Grid>
+        <TextBlock Text="Uppdatera medlem" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Tillgängliga medlemmar:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,-240,0,0" FontWeight="Bold"/>
+        <DataGrid x:Name="MedlemmarDataGrid" Height="200" Width="400" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,0,0,0" SelectionChanged="MedlemmarDataGrid_SelectionChanged"/>
+
+        <TextBlock Text="Medlemsuppgifter:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="400,-300,0,0" FontWeight="Bold"/>
+        <TextBlock Text="Namn:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,-240,0,0"/>
+        <TextBox x:Name="NamnTextBox" Height="25" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="500,-240,0,0"/>
+
+        <TextBlock Text="Födelsedatum:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,-180,0,0"/>
+        <DatePicker Name="FödelsePicker" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,-180,0,0"/>
+
+        <TextBlock Text="Telefonnummer:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,-120,0,0"/>
+        <TextBox x:Name="TelefonnummerTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="200" Margin="500,-120,0,0"/>
+
+        <TextBlock Text="Epost:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,-60,0,0"/>
+        <TextBox x:Name="EpostTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="25" Margin="500,-60,0,0"/>
+
+        <TextBlock Text="Betalstatus:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,0,0,0"/>
+        <ComboBox x:Name="BetalstatusComboBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="200" Margin="500,0,0,0"/>
+
+        <Button Content="Spara" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,60,0,0" Click="SparaButton_Click"/>
+
+        <Button Content="Tillbaka" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,240,0,0" Click="TillbakaButton_Click"/>
+    </Grid>
+</Window>

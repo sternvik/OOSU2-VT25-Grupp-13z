@@ -1,0 +1,38 @@
+﻿<Window x:Class="Presentationslager.Personal.Utrustningshantering.UppdaterautrustningWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentationslager.Personal.Utrustningshantering"
+        mc:Ignorable="d"
+        Title="UppdaterautrustningWindow" Height="450" Width="800"
+        Background="#6ab"
+        >
+    <Grid>
+        <TextBlock Text="Uppdatera utrustning" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <TextBlock Text="Kategorifilter:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-550,-320,0,0" FontWeight="Bold"/>
+        <ComboBox x:Name= "KategorifilterComboBox" VerticalAlignment="Center" HorizontalAlignment="center" Margin="-260,-320,0,0" Height="25" Width="200" SelectionChanged="KategorifilterComboBox_SelectionChanged"/>
+
+        <TextBlock Text="Tillgänglig utrustning:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-350,-240,0,0" FontWeight="Bold"/>
+        <DataGrid x:Name="UtrustningDataGrid" Height="200" Width="380" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,0,0,0" SelectionChanged="UtrustningDataGrid_SelectionChanged"/>
+
+        <TextBlock Text="Utrustningsinformation:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="400,-240,0,0" FontWeight="Bold"/>
+        <TextBlock Text="Namn:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,-180,0,0"/>
+        <TextBox x:Name="NamnTextBox" Height="25" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="500,-180,0,0"/>
+
+        <TextBlock Text="Kategori:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,-120,0,0"/>
+        <ComboBox Name="KategoriComboBox" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,-120,0,0"/>
+
+        <TextBlock Text="Skick:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,-60,0,0"/>
+        <ComboBox x:Name="SkickComboBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="200" Margin="500,-60,0,0"/>
+
+        <TextBlock Text="Tillgängliga:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="200,0,0,0"/>
+        <TextBox x:Name="TillgängligaTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="25" Margin="500,0,0,0" PreviewTextInput="TillgängligaTextBox_PreviewTextInput"/>
+
+        <Button Content="Spara" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,60,0,0" Click="SparaButton_Click"/>
+
+        <Button Content="Tillbaka" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,240,0,0" Click="TillbakaButton_Click"/>
+
+    </Grid>
+</Window>

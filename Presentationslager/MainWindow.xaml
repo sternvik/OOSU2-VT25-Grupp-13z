@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentationslager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background= "#6AB"
+>
+
+
     <Grid>
+        <TextBlock Text="SportClub" Margin="0,-150,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+        <Button Content="Logga in" Height="25" Width="150" Margin="0,-75,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="LoggainButton_Click"/>
+        <Button Content="Registrera" Height="25" Width="150" Margin="0,000,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="RegistreraButton_Click"/>
+        <Button Content="Avsluta" Height="25" Width="150" Margin="0,75,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="AvslutaButton_Click"/>
 
     </Grid>
 </Window>

@@ -11,7 +11,7 @@ namespace DataLager
 {
     public class ApplikationDbContext : DbContext
     {
-        
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=sqlutb2-db.hb.se,56077;Initial Catalog=oosu2513;Persist Security Info=True;User ID=oosu2513;Password=OUL850;Encrypt=True;Trust Server Certificate=True");
@@ -21,14 +21,14 @@ namespace DataLager
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<MedlemTräningspass>()
-                .HasKey(t => new {t.TräningspassID, t.MedlemID});
+                .HasKey(t => new { t.TräningspassID, t.MedlemID });
 
             modelBuilder.Entity<MedlemTräningspass>()
                 .HasOne(me => me.Medlem).WithMany(m => m.MedlemTräningspass).HasForeignKey(me => me.MedlemID);
 
             modelBuilder.Entity<MedlemTräningspass>()
                 .HasOne(tr => tr.Träningspass).WithMany(t => t.MedlemTräningspass).HasForeignKey(tr => tr.TräningspassID);
-                
+
 
             base.OnModelCreating(modelBuilder);
         }

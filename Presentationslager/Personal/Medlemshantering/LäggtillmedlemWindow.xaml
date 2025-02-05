@@ -1,0 +1,31 @@
+﻿<Window x:Class="Presentationslager.Personal.Medlemshantering.LäggtillmedlemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentationslager.Personal.Medlemshantering"
+        mc:Ignorable="d"
+        Title="LäggtillmedlemWindow" Height="450" Width="800"
+        Background="#6ab"
+        >
+    <Grid>
+        <TextBlock Text="Lägg till medlem" FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-280,0,0"/>
+
+        <TextBlock Text="Namn:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,-180,0,0"/>
+        <TextBox x:Name="NamnTextbox" Height="25" Width="200" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,-180,0,0"/>
+
+        <TextBlock Text="Födelsedatum:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,-120,0,0"/>
+        <DatePicker x:Name="FödelsedatumPick" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-120,0,0"/>
+
+        <TextBlock Text="Telefonnummer:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,-60,0,0"/>
+        <TextBox x:Name="TelefonnummerTextBox" Height="25" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-60,0,0"/>
+
+        <TextBlock Text="Epost:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-300,0,0,0"/>
+        <TextBox x:Name="EpostTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="25" Margin="0,0,0,0"/>
+
+        <Button Content="Lägg till medlem" Height="25" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,60,0,0" Click="LäggtillmedlemButton_Click"/>
+        <Button Content="Tillbaka" Height="25" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,120,0,0" Click="TillbakaButton_Click"/>
+
+
+    </Grid>
+</Window>

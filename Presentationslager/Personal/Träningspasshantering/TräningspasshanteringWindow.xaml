@@ -1,0 +1,19 @@
+﻿<Window x:Class="Presentationslager.Personal.Träningspasshantering.TräningspasshanteringWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentationslager.Personal.Träningspasshantering"
+        mc:Ignorable="d"
+        Title="TräningspasshanteringWindow" Height="450" Width="800"
+        Background="#6ab"
+        >
+    <Grid>
+        <TextBlock Text="Träningspasshantering" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-180,0,0"/>
+        <Button Content="Skapa Träningspass" Height="25" Width="200" Margin="0,-60,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SkapaträningspassButton_Click"/>
+        <Button Content="Redigera Träningspass" Height="25" Width="200" Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="RedigeraträningspassButton_Click"/>
+        <Button Content="Ta bort Träningspass" Height="25" Width="200" Margin="0,60,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="TabortträningspassButton_Click"/>
+        <Button Content="Hantera Deltagare" Height="25" Width="200" Margin="0,120,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="HanteraDeltagareButton_Click"/>
+        <Button Content="Tillbaka" Height="25" Width="200" Margin="0,180,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="TillbakaButton_Click"/>
+    </Grid>
+</Window>

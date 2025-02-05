@@ -1,0 +1,22 @@
+﻿<Window x:Class="Presentationslager.PersonalMenyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentationslager"
+        mc:Ignorable="d"
+        Title="PersonalMenyWindow" Height="450" Width="800"
+        Background= "#6AB"
+        >
+
+    <Grid>
+        <TextBlock Text="Personal Meny" Margin="0,-150,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+        <Button Content="Medlemshantering" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-60,0,0" Click="MedlemshanteringButton_Click"/>
+        <Button Content="Utrustningshantering" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,0" Click="UtrustningshanteringButton_Click"/>
+        <Button Content="Tränarhantering" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,60,0,0" Click="TränarhanteringButton_Click"/>
+        <Button Content="Utlåningshantering" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,120,0,0" Click="UtlåningshanteringButton_Click"/>
+        <Button Content="Träningspasshantering" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,180,0,0" Click="TräningspasshanteringButton_Click"/>
+        <Button Content="Rapporter" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,240,0,0" Click="RapporterButton_Click"/>
+        <Button Content="Avsluta" Height="25" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,300,0,0" Click="AvslutaButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window x:Class="Presentationslager.Personal.Utlåningshatering.VisaallautlåningarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentationslager.Personal.Utlåningshatering"
+        mc:Ignorable="d"
+        Title="VisaallautlåningarWindow" Height="450" Width="800"
+        Background="#6ab"
+        >
+    <Grid>
+        <TextBlock Text="Visa alla utlåningar" FontSize="25" FontWeight="Bold" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+        <TextBlock Text="Utlåningstatus filter:" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-500,-350,0,0"/>
+        <ComboBox x:Name="UtlåningstatusComboBox" Height="25" Width="200" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="-500,-300,0,0" SelectionChanged="UtlåningstatusComboBox_SelectionChanged"/>
+
+        <DataGrid x:Name="UtlåningarDataGrid" Width="500" Height="250" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="-250,0,0,0" SelectionChanged="UtlåningarDataGrid_SelectionChanged"/>
+
+        <TextBlock Text="Vald utlåningsinformation" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="500,-300,0,0"/>
+
+        <TextBlock Text="Medlem som har lånat:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,-240,0,0"/>
+        <TextBox x:Name="ValdmedlemTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="200" Margin="500,-180,0,0" IsReadOnly="True"/>
+
+        <TextBlock Text="Utlånad utrustning:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,-120,0,0"/>
+        <TextBox x:Name="ValdutrustningTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="200" Margin="500,-60,0,0" IsReadOnly="True"/>
+
+        <TextBlock Text="Utlåningsdatum:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,0,0,0"/>
+        <TextBox x:Name="UtlåningsdatumTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="200" Margin="500,60,0,0" IsReadOnly="True"/>
+
+        <TextBlock Text="Återlämningsdatum:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="500,120,0,0"/>
+        <TextBox x:Name="ÅterlämningsdatumTextBox" VerticalAlignment="Center" HorizontalAlignment="Center" Height="25" Width="200" Margin="500,180,0,0" IsReadOnly="True"/>
+
+        <Button Content="Tillbaka" Height="25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,350,0,0" Click="TillbakaButton_Click"/>
+
+
+    </Grid>
+</Window>

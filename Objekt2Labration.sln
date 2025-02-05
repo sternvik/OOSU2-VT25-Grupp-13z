@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentationslager", "Prese
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLager", "DataLager\DataLager.csproj", "{DA957EE7-31D2-4996-BBFC-F646EBDA1658}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffärsLager", "AffärsLager\AffärsLager.csproj", "{41C49B2A-91C7-4255-8432-9A834EED0B0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DA957EE7-31D2-4996-BBFC-F646EBDA1658}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA957EE7-31D2-4996-BBFC-F646EBDA1658}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA957EE7-31D2-4996-BBFC-F646EBDA1658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C49B2A-91C7-4255-8432-9A834EED0B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C49B2A-91C7-4255-8432-9A834EED0B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C49B2A-91C7-4255-8432-9A834EED0B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C49B2A-91C7-4255-8432-9A834EED0B0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
